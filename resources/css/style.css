@@ -1,9 +1,8 @@
-/* basis */
-
 html {
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 16px;
     /* Sets the rem basis */
+    height: 100%;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -12,51 +11,130 @@ html {
     box-sizing: inherit;
 }
 
-/* Standard element styling ================================================= */
+/* Universal styling **********************************************************/
 
 body {
-    /*positioning & display*//*box-model*/
-    margin: 0;
-    padding: 0;
-    /*styling*/
-    color: white;
-    background-color: black;
-    /*typography*/
+    color: #4a4a4a;
+    background-color: #fff;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    line-height: 1.65rem;
+    line-height: 1.625rem;
+    display: flex;
+    flex-direction: column;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 0;
+a {
+    color: #4a4a4a;
+    text-decoration: none;
 }
 
-/* image links: ../images/ */
+footer, header {
+    padding: 0 1.5rem;
+    /* 24px padding on left and right */
+}
 
-/* Header ====================================================================*/
+footer, header,  {
+    margin: 0 auto;
+    /* align block to center of container */
+}
+
+/* REFERENCES ********************************************************************************
+/* css background-image link to directory: "../images/"
+/* dark grey color: #4a4a4a
+/* light grey color: #9b9b9b
+*/
+
+#stickyfooter {
+    flex: 1 0 auto;
+}
+
+.flexrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbaseline {
+    display: flex;
+    align-items: baseline;
+}
+
+.maincontent {
+    height: 80vh;
+    background-color: coral;
+}
+
+/* Header and navigation ******************************************************/
 
 header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    border-bottom: 1px solid #9b9b9b;
+    background-color: white;
 }
 
-/* Navigation ================================================================*/
+header span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: .025rem;
+    display: inline-block;
+    margin: 0 .5px 0 0;
+}
+
+.logo {
+    height: 40px;
+}
+
+.boldname {
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.lightname {
+    font-weight: 300;
+    color: #9b9b9b;
+}
+
+/* Navigation *****************************************************************/
 
 nav {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1.5rem;
+    white-space: nowrap;
+    width: 100%;
+}
+
+nav a {
+    padding: 0 1rem 0 0;
+}
+
+nav a:last-child {
+    padding: 0;
 }
 
 /* Main Content ==============================================================*/
 
-#maincontent {
+.maincontent {
 }
 
-/* Footer ====================================================================*/
+/* Footer *********************************************************************/
 
 footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 6rem;
+    border-top: 1px solid #9b9b9b;
+    padding: 1rem 0 0 1.5rem;
 }
 
-/*----------------------------------------------------------------------------*/
-
-/* @media ====================================================================*/
+/* @media *********************************************************************/
 
 @media only screen and (max-width: 1024px) {
 }
