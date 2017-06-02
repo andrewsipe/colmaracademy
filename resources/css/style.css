@@ -1,0 +1,62 @@
+/* basis */
+
+html {
+    box-sizing: border-box;
+    font-size: 12px;
+    /* Sets the rem basis */
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Standard element styling ================================================= */
+
+body {
+    /*positioning & display*//*box-model*/
+    margin: 0;
+    padding: 0;
+    /*styling*/
+    color: white;
+    background-color: black;
+    /*typography*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* image links: ../images/ */
+
+/* Header ====================================================================*/
+
+header {
+}
+
+/* Navigation ================================================================*/
+
+nav {
+}
+
+/* Main Content ==============================================================*/
+
+#maincontent {
+}
+
+/* Footer ====================================================================*/
+
+footer {
+}
+
+/*----------------------------------------------------------------------------*/
+
+/* @media ====================================================================*/
+
+@media only screen and (max-width: 1024px) {
+}
