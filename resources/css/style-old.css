@@ -1,0 +1,309 @@
+html {
+    /* Sets the box model to include content size, padding and border, but ignores margin. */
+    box-sizing: border-box;
+    /* Sets the rem basis */
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    box-sizing: inherit;
+}
+
+button {
+    /* reset for user agent's button styling */
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+}
+
+/* REFERENCES ********************************************************************************
+/* css background-image link to directory: "../images/"
+/* dark grey color: #4a4a4a;
+/* medium grey color: #9b9b9b;
+/* light grey color: #d8d8d8;
+/*
+/* Universal styling **********************************************************/
+
+body {
+    color: #4a4a4a;
+    background-color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.074rem;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 1.728rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+h3 {
+    font-size: 1.44rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+section {
+    border: 1px dotted purple;
+    display: flex;
+    flex: 1 1 100%;
+    padding: 1rem 0;
+}
+
+aside {
+    display: flex;
+    flex: 1 1 40%;
+    height: 100%;
+    min-width: 27rem;
+}
+
+.sitewrapper {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background: linear-gradient(to right, blue 60%, red 40%);
+}
+
+.flexrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexrowbaseline {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+/* Header *********************************************************************/
+
+header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: white;
+    border: 1px dotted coral;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+header span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: .025rem;
+    display: inline-block;
+}
+
+.logo {
+    height: 80%;
+    object-fit: cover;
+}
+
+.titleleft {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.titleright {
+    font-weight: 300;
+    color: #9b9b9b;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1.5rem;
+    white-space: nowrap;
+    width: 100%;
+}
+
+nav a {
+    padding: 0 1rem 0 0;
+}
+
+nav a:last-child {
+    padding: 0;
+}
+
+/* Main Content ***************************************************************/
+
+main {
+    flex: 1 0 calc(100vh - 4rem);
+    background-color: coral;
+    margin: 4rem 0 0 0;
+}
+
+/* Banner section *************************************************************/
+
+.banner {
+    align-items: center;
+    background-color: #d8d8d8;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+}
+
+.banner img {
+    flex: 1 1 60%;
+    object-fit: cover;
+    width: 60%;
+    margin: 0 1.5rem 0 0;
+}
+
+.banner aside {
+    align-items: center;
+    flex-direction: row;
+    flex: 1 1 40%;
+}
+
+.banner article {
+    width: 66%;
+    justify-content: flex-start;
+}
+
+.banner h1, h4 {
+    margin: 0 0 2rem 0;
+}
+
+/*banner button*/
+
+.banner button {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.banner button:hover {
+    background-color: #37b7ee;
+}
+
+.banner button:active {
+    background-color: #f50;
+}
+
+/* Information ****************************************************************/
+
+.information {
+    display: flex;
+    flex: 1 1 100%;
+    background-color: #fff;
+    /*background: linear-gradient(to right, blue 60%, red 40%);*/
+}
+
+.infobanner {
+    flex: 1 1 60%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infobanner img {
+    width: 100%;
+    margin: 0;
+}
+
+.infobanner h1 {
+    margin: 2rem 0 .75rem 0;
+}
+
+.infobanner p {
+    margin: .75rem 0;
+}
+
+.information aside {
+    align-items: stretch;
+    border-left: 1px solid #9b9b9b;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.information article {
+    padding: 1rem 1.5rem 1rem 1rem;
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #9b9b9b;
+}
+
+.information article:last-child {
+    border: none;
+}
+
+.information article:hover {
+    background-color: #d8d8d8;
+}
+
+.information article img {
+    margin: 0 1rem 0 0;
+    width: 35%;
+}
+
+.information article h3, p {
+    margin: 0 0 .5rem 0;
+}
+
+.articlecopy {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    padding: 0 1.5rem 0 0;
+}
+
+/* Footer *********************************************************************/
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 6rem;
+    border-top: 1px solid #d8d8d8;
+    padding: 1rem 1.5rem 0 1.5rem;
+    transition: sticky 10s ease-out;
+    border: 1px dotted coral;
+}
+
+.footcopy {
+    margin: 0 0 0 1.5rem;
+}
+
+.footlink a {
+    margin: 0 1.5rem 0 0;
+}
+
+/* @media *********************************************************************/
+
+@media only screen and (max-width: 1024px) {
+}

@@ -1,34 +1,56 @@
+/* Root, Rem and Resets ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
 html {
+    /* sets the box model to include content size, padding and border, but ignores margin. */
     box-sizing: border-box;
+    /* sets the rem basis */
     font-size: 16px;
-    /* Sets the rem basis */
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-
 *, *:before, *:after {
+    /* apply a natural box layout model to all elements, but allowing components to change */
     box-sizing: inherit;
 }
 
-/* reset button styling */
-
 button {
+    /* reset for user agent's button styling */
     outline: none;
+    text-decoration: none;
     border: 0;
     padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    word-spacing: inherit;
+    letter-spacing: inherit;
 }
 
-/* Universal styling **********************************************************/
+/* References ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  background-image link to directory: "../images/"
+  dark grey color: #4a4a4a;
+  medium grey color: #9b9b9b;
+  light grey color: #d8d8d8;
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+/* Universal Styling
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 body {
+    /* color */
     color: #4a4a4a;
     background-color: #fff;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    /* typography */
+    letter-spacing: .015625rem;
+    word-spacing: .0625rem;
+    line-height: 1.425;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-weight: normal;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.625rem;
-    display: flex;
-    flex-direction: column;
+}
+
+main {
+    background-color: coral;
+    margin: 4rem 0 0 0;
 }
 
 a {
@@ -36,33 +58,19 @@ a {
     text-decoration: none;
 }
 
-footer, header {
-    padding: 0 1.5rem;
-    /* 24px padding on left and right */
-}
-
-footer, header {
-    margin: 0 auto;
-    /* align block to center of container */
-}
-
-footer, header {
-    width: 100%;
-}
-
 section {
-    position: sticky;
-    top: 64px;
-    background-color: purple;
-    display: flex;
-    flex: 1 1 100%;
-    transition: sticky 10 ease-out;
+    top: 4rem;
+    /*background: linear-gradient(to right, purple 60%, coral 40%);*/
+    max-width: 75rem;
+}
+
+aside {
+    width: 27rem;
 }
 
 h1 {
-    flex: 2 2 auto;
     font-size: 2.074rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.25;
 }
 
@@ -74,22 +82,50 @@ h2 {
 
 h3 {
     font-size: 1.44rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.45;
 }
 
 h4 {
     font-size: 1.2rem;
     font-weight: 400;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
     line-height: 1.55;
 }
 
-/* REFERENCES ********************************************************************************
-/* css background-image link to directory: "../images/"
-/* dark grey color: #4a4a4a;
-/* medium grey color: #9b9b9b;
-/* light grey color: #d8d8d8;
-*/
+h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.sitewrap {
+    /* sizing */
+    max-width: 75rem;
+    width: 100%;
+    /* alignment */
+    margin: 0 auto;
+    background-color: purple;
+}
+
+.sidepad {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Flex Layouts
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+body {
+    /* display */
+    display: flex;
+    flex-direction: column;
+}
 
 .flexrow {
     display: flex;
@@ -103,117 +139,99 @@ h4 {
     flex-direction: row;
 }
 
-.spacebetween {
-    justify-content: space-between;
-}
-
-/* Header *********************************************************************/
+/* Header: Logo and Navigation ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 header {
+    /* position */
     position: fixed;
     z-index: 100;
+    /* display */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow: row nowrap;
+    /* size */
+    max-width: 75rem;
+    width: 100%;
     height: 4rem;
+    padding: 0 1.5rem;
+    /* style */
     border-bottom: 1px solid #d8d8d8;
-    background-color: white;
+    white-space: nowrap;
+    background-color: orange;
 }
+
+/* Logo */
 
 header span {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.15rem;
-    letter-spacing: .025rem;
+    font-size: 1.25rem;
+    letter-spacing: .03625rem;
+    line-height: 1.65;
     display: inline-block;
-    margin: 0 .5px 0 0;
 }
 
 .logo {
-    height: 40px;
+    height: 2.5rem;
 }
 
 .boldname {
-    font-weight: 500;
+    font-weight: 700;
     color: #4a4a4a;
+    margin: 0 -4px 0 0;
 }
 
 .lightname {
-    font-weight: 300;
+    font-weight: 400;
     color: #9b9b9b;
 }
 
-/* Navigation *****************************************************************/
-
-nav {
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 1.5rem;
-    white-space: nowrap;
-    width: 100%;
-}
+/* Navigation */
 
 nav a {
-    padding: 0 1rem 0 0;
+    padding: 0 0 0 1rem;
 }
 
-nav a:last-child {
-    padding: 0;
-}
-
-/* wrapper between header and footer to push footer down */
-
-#wrapper {
-    top: 4rem;
-    flex: 1 0 calc(100vh - 6rem);
-}
-
-/* Main Content ***************************************************************/
-
-main {
-    background-color: coral;
-    margin: 4rem 0 0 0;
-}
-
-/* Banner section *************************************************************/
+/* Section 1: Banner Image and Button ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .banner {
     align-items: center;
-    background-color: #d8d8d8;
+    background-color: #9b9b9b;
     display: flex;
-    flex: 1 1 100%;
-    justify-content: flex-start;
+    padding: 2rem 0;
 }
 
+/* Banner Image */
+
 .banner img {
-    flex: 1 1 60%;
-    padding: 2rem 1.5rem;
-    object-fit: cover;
     width: 60%;
+    margin: 0 1.5rem 0 0;
+    padding: 0 0 0 1.5rem;
 }
 
 .banner aside {
-    padding: 2rem 1.5rem 2rem 1rem;
-    width: 423px;
+    width: 40%;
 }
 
 .banner article {
+    width: 66%;
+    margin: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 1.5rem 0;
 }
 
 .banner h1, h4 {
     margin: 0 0 2rem 0;
 }
 
-/*button*/
+/* Button */
 
 .banner button {
     background-color: #4a4a4a;
     color: #fff;
-    font-size: 1rem;
-    padding: 8px 0;
+    padding: 1rem 0;
 }
 
 .banner button:hover {
@@ -224,49 +242,46 @@ main {
     background-color: #f50;
 }
 
-/* Information ****************************************************************/
+/* Section 2: Information Image and Articles ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .information {
     display: flex;
-    flex: 1 1 100%;
 }
 
 .infobanner {
-    flex: 1 1 60%;
-    background-color: #fff;
-    padding: 2rem 1.5rem;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 1.5rem 0 0;
+    padding: 2rem 0 2rem 1.5rem;
 }
 
 .infobanner img {
-    object-fit: cover;
     width: 100%;
+    margin: 0 0 .5rem 0;
 }
 
-.infobanner h1 {
-    margin: 2rem 0 0 0;
-}
-
-.infobanner p {
-    margin: 1.5rem 0;
+.infobanner h1, .infobanner h6, .infobanner p {
+    margin: 1.5rem 0 0 0;
 }
 
 .information aside {
+    width: 40%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-flow: column wrap;
     border-left: 1px solid #9b9b9b;
-    width: 423px;
+    padding: 1rem 0 0 0;
+    height: 100%;
 }
 
 .information article {
-    flex: 1 1 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-flow: row nowrap;
     background-color: #fff;
     border-bottom: 1px solid #9b9b9b;
+    padding: 0 1.5rem 0 0;
 }
 
 .information article:last-child {
@@ -282,18 +297,147 @@ main {
     width: 35%;
 }
 
-.information article h3, p {
+.articlecopy {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1rem 0 0 0;
+    height: 100%;
+}
+
+.articlecopy h3, .articlecopy p {
     margin: 0 0 .5rem 0;
+}
+
+.articlecopy a {
+    color: #37b7ee;
+}
+
+/* Section 3: Courses ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.courses {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background: deepskyblue;
+    padding: 0 1.5rem;
+}
+
+.courses article {
+    max-width: 30%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: #123;
+    margin: 0 2rem 1rem 0;
+}
+
+.courses article:nth-child(3n+0) {
+    margin: 0 0 1rem 0;
+}
+
+.courses article img {
+    width: 100%;
+}
+
+.courses h3 {
+    margin: 1rem 1rem 0;
+}
+
+.courses h6 {
+    margin: .5rem 1rem 0;
+}
+
+.courses p {
+    margin: .5rem 1rem 1.5rem;
+}
+
+/* Section 4: Thesis Video and Articles ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.thesis {
+    display: flex;
+}
+
+.sectionhead {
+    display: flex;
+    width: 100%;
+    max-width: 75rem;
+    padding: 1rem 0 2rem 0;
+    justify-content: center;
+}
+
+.thesisbanner {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 1.5rem 0 0;
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+.thesisbanner h3, .thesisbanner p {
+    margin: 1.5rem 0 0 0;
+}
+
+.thesis aside {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    border-left: 1px solid #9b9b9b;
+    padding: 1rem 0 0 0;
+    height: 100%;
+}
+
+.thesis article {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background-color: #fff;
+    border-bottom: 1px solid #9b9b9b;
+    padding: 0 1.5rem 0 0;
+    height: 10.5rem;
+}
+
+.thesis article:last-child {
+    border: none;
+}
+
+.thesis article:hover {
+    background-color: #d8d8d8;
+}
+
+.thesis article img {
+    margin: 1rem;
+    width: 35%;
+    height: 8.5rem;
 }
 
 .articlecopy {
     display: flex;
     flex-flow: column wrap;
-    flex: 1;
-    padding: 0 1.5rem 0 0;
+    margin: 1rem 0 0 0;
+    height: 100%;
 }
 
-/* Footer *********************************************************************/
+.articlecopy h3, .articlecopy p {
+    margin: 0 0 .5rem 0;
+}
+
+.articlecopy a {
+    color: #37b7ee;
+}
+
+/* Sticky Footer: pushes footer down to stick to bottom of viewport
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+#stickyfooter {
+    top: 4rem;
+    flex: 1 0 calc(100vh - 6rem);
+}
+
+/* Footer: Copyright and Terms ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 footer {
     display: flex;
@@ -301,19 +445,20 @@ footer {
     justify-content: space-between;
     height: 6rem;
     border-top: 1px solid #d8d8d8;
-    padding: 1rem 0 0 0;
-    transition: sticky 10s ease-out;
+    padding: 1rem 1.5rem 0;
+    white-space: nowrap;
+    flex-flow: row nowrap;
+    width: 100%;
+    background-color: #b59;
 }
 
-.footcopy {
-    margin: 0 0 0 1.5rem;
+footer a {
+    margin: 0 0 0 1rem;
 }
 
-.footlink a {
-    margin: 0 1.5rem 0 0;
-}
+/* Media Queries ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-/* @media *********************************************************************/
+/* large screens over 1200px */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 75rem) {
 }
