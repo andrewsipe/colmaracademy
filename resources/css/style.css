@@ -227,15 +227,28 @@ header span {
 nav a {
     display: inline-block;
 
-    padding: 0 0 0 1rem;
+    margin: 0 0 0 .5rem;
+    padding: 0 .25rem 0 .25rem;
 
     color: #ddb;
 }
 
 nav a:hover {
-    background-color: orange;
-    box-shadow: 10px 5px 5px black;
+    color: #635;
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
+    background-color: #d8d8d8; /*#fc8;*/
+    box-shadow: 0 1.15rem #d8d8d8;
 }
+
+nav a:active {
+    color: #123;
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
+    background-color: #fc8;
+    box-shadow: 0 1.15rem #d8d8d8;
+}
+
 
 /* Section 1: Banner Image and Button ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
