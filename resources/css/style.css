@@ -1,28 +1,29 @@
 /* Root, Rem and Resets ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
 html {
-    /* sets the box model to include content size, padding and border, but ignores margin. */
-    box-sizing: border-box;
-    /* sets the rem basis */
     font-size: 16px;
+    /* sets the rem basis */
+
+    box-sizing: border-box;
+    /* sets the box model to include content size, padding and border, but ignores margin. */
 }
 
-*, *:before, *:after {
-    /* apply a natural box layout model to all elements, but allowing components to change */
+*,
+*:before,
+*:after {
     box-sizing: inherit;
+    /* apply a natural box layout model to all elements, but allowing components to change */
 }
+
+
 
 button {
-    /* reset for user agent's button styling */
-    outline: none;
-    text-decoration: none;
-    border: 0;
     padding: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    word-spacing: inherit;
-    letter-spacing: inherit;
+
+    text-decoration: none;
+
+    border: 0;
+    outline: none;
+    /* reset for user agent's button styling */
 }
 
 /* References ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -32,35 +33,59 @@ button {
   light grey color: #d8d8d8;
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
+
 /* Universal Styling
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+* {
+    font-family: 'Fira Sans', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+
+    letter-spacing: .03625rem;
+    word-spacing: .0625rem;
+}
 
 body {
-    /* color */
+    display: flex;
+    flex-direction: column;
+
     color: #4a4a4a;
     background-color: #fff;
-    /* typography */
-    letter-spacing: .015625rem;
-    word-spacing: .0625rem;
-    line-height: 1.425;
-    font-family: 'Source Sans Pro', Helvetica, sans-serif;
-    font-weight: normal;
+}
+
+body,
+p {
+    font-family: 'Fira Sans', Helvetica, sans-serif;
     font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+
+    letter-spacing: .03625rem;
+    word-spacing: .0625rem;
+}
+
+blockquote {
+    text-indent: -.5rem;
+
+    hanging-punctuation: first;
 }
 
 main {
-    background-color: coral;
     margin: 4rem 0 0 0;
+
+    background-color: coral;
 }
 
 a {
-    color: #4a4a4a;
     text-decoration: none;
+
+    color: #4a4a4a;
 }
 
 section {
     top: 4rem;
-    /*background: linear-gradient(to right, purple 60%, coral 40%);*/
+
     max-width: 75rem;
 }
 
@@ -104,28 +129,29 @@ h6 {
     line-height: 1.6;
 }
 
+ul {
+    display: flex;
+}
+
 .sitewrap {
-    /* sizing */
-    max-width: 75rem;
     width: 100%;
-    /* alignment */
+    max-width: 75rem;
     margin: 0 auto;
+
     background-color: purple;
 }
 
-.sidepad {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.sectionhead {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 75rem;
+    padding: 1rem 0 2rem 0;
 }
 
 /* Flex Layouts
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-body {
-    /* display */
-    display: flex;
-    flex-direction: column;
-}
 
 .flexrow {
     display: flex;
@@ -142,23 +168,24 @@ body {
 /* Header: Logo and Navigation ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 header {
-    /* position */
     position: fixed;
     z-index: 100;
-    /* display */
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-flow: row nowrap;
-    /* size */
-    max-width: 75rem;
+    justify-content: space-between;
+
     width: 100%;
+    max-width: 75rem;
     height: 4rem;
     padding: 0 1.5rem;
-    /* style */
-    border-bottom: 1px solid #d8d8d8;
+
     white-space: nowrap;
-    background-color: orange;
+
+    color: #ddb;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #635;
 }
 
 /* Logo */
@@ -166,9 +193,11 @@ header {
 header span {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
-    letter-spacing: .03625rem;
     line-height: 1.65;
+
     display: inline-block;
+
+    letter-spacing: .03625rem;
 }
 
 .logo {
@@ -176,29 +205,47 @@ header span {
 }
 
 .boldname {
-    font-weight: 700;
-    color: #4a4a4a;
-    margin: 0 -4px 0 0;
+    font-weight: 500;
+
+    margin: 0 -.3rem 0 0;
+
+    letter-spacing: .025rem;
+
+    color: #ddb;
 }
 
 .lightname {
-    font-weight: 400;
-    color: #9b9b9b;
+    font-weight: 200;
+
+    letter-spacing: .025rem;
+
+    color: #fc8;
 }
 
 /* Navigation */
 
 nav a {
+    display: inline-block;
+
     padding: 0 0 0 1rem;
+
+    color: #ddb;
+}
+
+nav a:hover {
+    background-color: orange;
+    box-shadow: 10px 5px 5px black;
 }
 
 /* Section 1: Banner Image and Button ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .banner {
-    align-items: center;
-    background-color: #9b9b9b;
     display: flex;
+    align-items: center;
+
     padding: 2rem 0;
+
+    background-color: #9b9b9b;
 }
 
 /* Banner Image */
@@ -214,24 +261,27 @@ nav a {
 }
 
 .banner article {
-    width: 66%;
-    margin: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    width: 66%;
+    margin: 0 0 0 1rem;
     padding: 0 1.5rem 0;
 }
 
-.banner h1, h4 {
+.banner h1,
+h4 {
     margin: 0 0 2rem 0;
 }
 
 /* Button */
 
 .banner button {
-    background-color: #4a4a4a;
-    color: #fff;
     padding: 1rem 0;
+
+    color: #fff;
+    background-color: #4a4a4a;
 }
 
 .banner button:hover {
@@ -249,10 +299,11 @@ nav a {
 }
 
 .infobanner {
-    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    width: 60%;
     margin: 0 1.5rem 0 0;
     padding: 2rem 0 2rem 1.5rem;
 }
@@ -262,26 +313,32 @@ nav a {
     margin: 0 0 .5rem 0;
 }
 
-.infobanner h1, .infobanner h6, .infobanner p {
+.infobanner h1,
+.infobanner h6,
+.infobanner blockquote {
     margin: 1.5rem 0 0 0;
 }
 
 .information aside {
-    width: 40%;
     display: flex;
     flex-flow: column wrap;
-    border-left: 1px solid #9b9b9b;
-    padding: 1rem 0 0 0;
+
+    width: 40%;
     height: 100%;
+    padding: 1rem 0 0 0;
+
+    border-left: 1px solid #9b9b9b;
 }
 
 .information article {
     display: flex;
     align-items: flex-start;
     flex-flow: row nowrap;
-    background-color: #fff;
-    border-bottom: 1px solid #9b9b9b;
+
     padding: 0 1.5rem 0 0;
+
+    border-bottom: 1px solid #9b9b9b;
+    background-color: #fff;
 }
 
 .information article:last-child {
@@ -293,18 +350,20 @@ nav a {
 }
 
 .information article img {
-    margin: 1rem;
     width: 35%;
+    margin: 1rem;
 }
 
 .articlecopy {
     display: flex;
     flex-flow: column wrap;
-    margin: 1rem 0 0 0;
+
     height: 100%;
+    margin: 1rem 0 0 0;
 }
 
-.articlecopy h3, .articlecopy p {
+.articlecopy h3,
+.articlecopy p {
     margin: 0 0 .5rem 0;
 }
 
@@ -317,41 +376,43 @@ nav a {
 .courses {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: center;
-    background: deepskyblue;
-    padding: 0 1.5rem;
 }
 
-.courses article {
-    max-width: 30%;
-    height: 100%;
+.coursecol {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    align-items: baseline;
+    flex-flow: column wrap;
+
+    max-width: 30%;
+    margin: 0 1rem 1rem;
+
+    color: papayawhip;
     background-color: #123;
-    margin: 0 2rem 1rem 0;
 }
 
-.courses article:nth-child(3n+0) {
-    margin: 0 0 1rem 0;
+.coursecol h3 {
+    margin: 1rem 1rem .5rem;
 }
 
-.courses article img {
+.coursecol h6 {
+    font-variant: small-caps;
+
+    width: 90%;
+    margin: 0 1rem .5rem;
+
+    text-align: left;
+    letter-spacing: .085rem;
+
+    border-bottom: 1px solid papayawhip;
+}
+
+.coursecol p {
+    margin: 1rem 1rem 1.5rem;
+}
+
+.coursecol img {
     width: 100%;
-}
-
-.courses h3 {
-    margin: 1rem 1rem 0;
-}
-
-.courses h6 {
-    margin: .5rem 1rem 0;
-}
-
-.courses p {
-    margin: .5rem 1rem 1.5rem;
+    margin: 0;
 }
 
 /* Section 4: Thesis Video and Articles ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -360,44 +421,46 @@ nav a {
     display: flex;
 }
 
-.sectionhead {
-    display: flex;
-    width: 100%;
-    max-width: 75rem;
-    padding: 1rem 0 2rem 0;
-    justify-content: center;
-}
-
 .thesisbanner {
-    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    max-width: 60%;
     margin: 0 1.5rem 0 0;
     padding: 2rem 0 2rem 1.5rem;
 }
 
-.thesisbanner h3, .thesisbanner p {
+.thesisbanner video {
+    width: 100%;
+}
+
+.thesisbanner h3,
+.thesisbanner blockquote {
     margin: 1.5rem 0 0 0;
 }
 
 .thesis aside {
-    width: 40%;
     display: flex;
     flex-flow: column wrap;
-    border-left: 1px solid #9b9b9b;
-    padding: 1rem 0 0 0;
+
+    width: 40%;
     height: 100%;
+    padding: 1rem 0 0 0;
+
+    border-left: 1px solid #9b9b9b;
 }
 
 .thesis article {
     display: flex;
     align-items: flex-start;
     flex-flow: row nowrap;
-    background-color: #fff;
-    border-bottom: 1px solid #9b9b9b;
-    padding: 0 1.5rem 0 0;
+
     height: 10.5rem;
+    padding: 0 1.5rem 0 0;
+
+    border-bottom: 1px solid #9b9b9b;
+    background-color: #fff;
 }
 
 .thesis article:last-child {
@@ -409,19 +472,21 @@ nav a {
 }
 
 .thesis article img {
-    margin: 1rem;
     width: 35%;
     height: 8.5rem;
+    margin: 1rem;
 }
 
 .articlecopy {
     display: flex;
     flex-flow: column wrap;
-    margin: 1rem 0 0 0;
+
     height: 100%;
+    margin: 1rem 0 0 0;
 }
 
-.articlecopy h3, .articlecopy p {
+.articlecopy h3,
+.articlecopy p {
     margin: 0 0 .5rem 0;
 }
 
@@ -434,6 +499,7 @@ nav a {
 
 #stickyfooter {
     top: 4rem;
+
     flex: 1 0 calc(100vh - 6rem);
 }
 
@@ -442,18 +508,24 @@ nav a {
 footer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    height: 6rem;
-    border-top: 1px solid #d8d8d8;
-    padding: 1rem 1.5rem 0;
-    white-space: nowrap;
     flex-flow: row nowrap;
+    justify-content: space-between;
+
     width: 100%;
-    background-color: #b59;
+    height: 6rem;
+    padding: 1rem 1.5rem 0;
+
+    white-space: nowrap;
+
+    color: #ddb;
+    border-top: 1px solid #d8d8d8;
+    background-color: #635;
 }
 
 footer a {
     margin: 0 0 0 1rem;
+
+    color: #ddb;
 }
 
 /* Media Queries ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
