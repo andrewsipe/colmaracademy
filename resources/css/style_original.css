@@ -1,0 +1,550 @@
+/* Root, Rem and Resets
+==============================================================================*/
+html {
+    font-size: 16px;
+    /* sets the rem basis */
+
+    box-sizing: border-box;
+    /* sets the box model to include content size, padding and border, but ignores margin. */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    /* apply a natural box layout model to all elements, but allowing components to change */
+}
+
+
+
+button {
+    padding: 0;
+
+    text-decoration: none;
+
+    border: 0;
+    outline: none;
+    /* reset for user agent's button styling */
+}
+
+/* References
+================================================================================
+  background-image link to directory: "../images/"
+  dark grey color: #4a4a4a;
+  medium grey color: #9b9b9b;
+  light grey color: #d8d8d8;
+==============================================================================*/
+
+
+/* Universal Styling
+==============================================================================*/
+* {
+    font-family: 'Fira Sans', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+
+    letter-spacing: .03625rem;
+    word-spacing: .0625rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    color: #4a4a4a;
+    background-color: #fff;
+}
+
+body,
+p {
+    font-family: 'Fira Sans', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+
+    letter-spacing: .03625rem;
+    word-spacing: .0625rem;
+}
+
+blockquote {
+    text-indent: -.5rem;
+
+    hanging-punctuation: first;
+}
+
+main {
+    margin: 4rem 0 0 0;
+
+    background-color: coral;
+}
+
+a {
+    text-decoration: none;
+
+    color: #4a4a4a;
+}
+
+section {
+    top: 4rem;
+
+    max-width: 75rem;
+}
+
+aside {
+    width: 27rem;
+}
+
+h1 {
+    font-size: 2.074rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 1.728rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+h3 {
+    font-size: 1.44rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+ul {
+    display: flex;
+}
+
+.sitewrap {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+
+    background-color: purple;
+}
+
+.sectionhead {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 75rem;
+    padding: 1rem 0 2rem 0;
+}
+
+/* Flex Layouts
+==============================================================================*/
+
+.flexrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexrowbaseline {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+/* Header: Logo and Navigation
+==============================================================================*/
+
+header {
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 75rem;
+    height: 4rem;
+    padding: 0 1.5rem;
+
+    white-space: nowrap;
+
+    color: #ddb;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #635;
+}
+
+/* Logo */
+
+header span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.65;
+
+    display: inline-block;
+
+    letter-spacing: .03625rem;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.boldname {
+    font-weight: 500;
+
+    margin: 0 -.3rem 0 0;
+
+    letter-spacing: .025rem;
+
+    color: #ddb;
+}
+
+.lightname {
+    font-weight: 200;
+
+    letter-spacing: .025rem;
+
+    color: #fc8;
+}
+
+/* Navigation */
+
+nav a {
+    display: inline-block;
+
+    margin: 0 0 0 .5rem;
+    padding: 0 .25rem 0 .25rem;
+
+    color: #ddb;
+}
+
+nav a:hover {
+    color: #635;
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
+    background-color: #d8d8d8; /*#fc8;*/
+    box-shadow: 0 1.15rem #d8d8d8;
+}
+
+nav a:active {
+    color: #123;
+    border-top-left-radius: .35rem;
+    border-top-right-radius: .35rem;
+    background-color: #fc8;
+    box-shadow: 0 1.15rem #d8d8d8;
+}
+
+
+/* Section 1: Banner Image and Button
+==============================================================================*/
+
+.banner {
+    display: flex;
+    align-items: center;
+
+    padding: 2rem 0;
+
+    background-color: #9b9b9b;
+}
+
+/* Banner Image */
+
+.banner img {
+    width: 60%;
+    margin: 0 1.5rem 0 0;
+    padding: 0 0 0 1.5rem;
+}
+
+.banner aside {
+    width: 40%;
+}
+
+.banner article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 66%;
+    margin: 0 0 0 1rem;
+    padding: 0 1.5rem 0;
+}
+
+.banner h1,
+h4 {
+    margin: 0 0 2rem 0;
+}
+
+/* Button */
+
+.banner button {
+    padding: 1rem 0;
+
+    color: #fff;
+    background-color: #4a4a4a;
+}
+
+.banner button:hover {
+    background-color: #37b7ee;
+}
+
+.banner button:active {
+    background-color: #f50;
+}
+
+/* Section 2: Information Image and Articles
+==============================================================================*/
+
+.information {
+    display: flex;
+}
+
+.infobanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 60%;
+    margin: 0 1.5rem 0 0;
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+.infobanner img {
+    width: 100%;
+    margin: 0 0 .5rem 0;
+}
+
+.infobanner h1,
+.infobanner h6,
+.infobanner blockquote {
+    margin: 1.5rem 0 0 0;
+}
+
+.information aside {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 40%;
+    height: 100%;
+    padding: 1rem 0 0 0;
+
+    border-left: 1px solid #9b9b9b;
+}
+
+.information article {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+
+    padding: 0 1.5rem 0 0;
+
+    border-bottom: 1px solid #9b9b9b;
+    background-color: #fff;
+}
+
+.information article:last-child {
+    border: none;
+}
+
+.information article:hover {
+    background-color: #d8d8d8;
+}
+
+.information article img {
+    width: 35%;
+    margin: 1rem;
+}
+
+.articlecopy {
+    display: flex;
+    flex-flow: column wrap;
+
+    height: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.articlecopy h3,
+.articlecopy p {
+    margin: 0 0 .5rem 0;
+}
+
+.articlecopy a {
+    color: #37b7ee;
+}
+
+/* Section 3: Courses
+==============================================================================*/
+
+.courses {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.coursecol {
+    display: flex;
+    flex-flow: column wrap;
+
+    max-width: 30%;
+    margin: 0 1rem 1rem;
+
+    color: papayawhip;
+    background-color: #123;
+}
+
+.coursecol h3 {
+    margin: 1rem 1rem .5rem;
+}
+
+.coursecol h6 {
+    font-variant: small-caps;
+
+    width: 90%;
+    margin: 0 1rem .5rem;
+
+    text-align: left;
+    letter-spacing: .085rem;
+
+    border-bottom: 1px solid papayawhip;
+}
+
+.coursecol p {
+    margin: 1rem 1rem 1.5rem;
+}
+
+.coursecol img {
+    width: 100%;
+    margin: 0;
+}
+
+/* Section 4: Thesis Video and Articles
+==============================================================================*/
+
+.thesis {
+    display: flex;
+}
+
+.thesisbanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 60%;
+    margin: 0 1.5rem 0 0;
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+.thesisbanner video {
+    width: 100%;
+}
+
+.thesisbanner h3,
+.thesisbanner blockquote {
+    margin: 1.5rem 0 0 0;
+}
+
+.thesis aside {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 40%;
+    height: 100%;
+    padding: 1rem 0 0 0;
+
+    border-left: 1px solid #9b9b9b;
+}
+
+.thesis article {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+
+    height: 10.5rem;
+    padding: 0 1.5rem 0 0;
+
+    border-bottom: 1px solid #9b9b9b;
+    background-color: #fff;
+}
+
+.thesis article:last-child {
+    border: none;
+}
+
+.thesis article:hover {
+    background-color: #d8d8d8;
+}
+
+.thesis article img {
+    width: 35%;
+    height: 8.5rem;
+    margin: 1rem;
+}
+
+.articlecopy {
+    display: flex;
+    flex-flow: column wrap;
+
+    height: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.articlecopy h3,
+.articlecopy p {
+    margin: 0 0 .5rem 0;
+}
+
+.articlecopy a {
+    color: #37b7ee;
+}
+
+/* Sticky Footer: pushes footer down to stick to bottom of viewport
+==============================================================================*/
+
+#stickyfooter {
+    top: 4rem;
+
+    flex: 1 0 calc(100vh - 6rem);
+}
+
+/* Footer: Copyright and Terms
+==============================================================================*/
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 1.5rem 0;
+
+    white-space: nowrap;
+
+    color: #ddb;
+    border-top: 1px solid #d8d8d8;
+    background-color: #635;
+}
+
+footer a {
+    margin: 0 0 0 1rem;
+
+    color: #ddb;
+}

@@ -1,46 +1,193 @@
 /* Media Queries
 ==============================================================================*/
 /* large desktops */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
     html {
         font-size: 24px;
+
+        transition: all 1s ease ;
     }
 }
 /* desktops */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
     html {
         font-size: 22px;
+
+        transition: all 1s ease ;
     }
 }
 /* tablet */
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1080px) {
     html {
         font-size: 20px;
+
+        transition: all 1s ease ;
     }
 }
 /* landscape mobile */
-@media only screen and (max-width: 835px) {
+@media only screen and (max-width: 900px) {
     html {
         font-size: 16px;
+
+        transition: all 1s ease ;
+    }
+    .mediaobject_para {
+        width: 45%;
     }
 }
 /* portrait mobile */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
     html {
         font-size: 14px;
+
+        transition: all 1s ease ;
+    }
+    .logotype_perp {
+        display: none;
+    }
+    nav img {
+        height: 2rem;
     }
 }
-
-/* large desktops */
-@media only screen and (max-width: 400px) {
+/* small screens */
+@media only screen and (max-width: 600px) {
     html {
-        font-size: 8px;
+        font-size: 14px;
+
+        transition: all 1s ease 1s;
+    }
+    section {
+        align-items: stretch;
+
+        padding: 1rem;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav a {
+        justify-content: space-between;
+    }
+    nav img {
+        height: 2.5rem;
+    }
+    .menu_perp span {
+        display: none;
+    }
+    .menu_perp img {
+        display: flex;
+    }
+    .menu_perp a:nth-child(3) {
+        display: none;
+    }
+    .banner_full_perp {
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    .banner_wide_para {
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+    .banner_narrow_para {
+        align-items: stretch;
+        justify-content: center;
+
+        width: 100%;
+        padding: 1rem;
+    }
+    .banner_narrow_para ul {
+        margin: 0;
+
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .info_full_perp {
+        align-items: flex-start;
+        flex-flow: column wrap;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .info_wide_para {
+        display: none;
+    }
+    .info_narrow_para {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .mediaobject_perp {
+        align-items: stretch;
+        flex-flow: column wrap;
+    }
+    .mediaobject_perp ul {
+        padding: 0 0 0 2rem;
+    }
+    .mediaobject_perp img {
+        width: 100%;
+        height: 168px;
+
+        object-fit: cover;
+        object-position: center;
+    }
+    .mediacopy_para li:nth-child(3) {
+        padding: 0 0 1rem 0;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+
+        width: 100%;
+
+        object-fit: cover;
+        object-position: center;
     }
 
-    body,
-    header,
-    footer,
-    main {
-        width: 400px;
+    .courses_perp {
+        align-items: stretch;
+        flex-flow: column wrap;
+    }
+    .courses_perp .mediaobject_para img,
+    .courses_perp .mediatext_para li:nth-child(2n+0),
+    .courses_perp .mediatext_para li:nth-child(3n+0) {
+        display: none;
+    }
+    .courses_perp .mediaobject_para {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .courses_perp .mediatext_para li {
+        display: flex;
+        align-items: baseline;
+
+        padding: 0;
+    }
+    .thesis_full_para {
+        flex-flow: column wrap;
+    }
+    .thesis_wide_para {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+    .videotext_para,
+    .thesis_narrow_para {
+        display: none;
+    }
+    footer {
+        align-items: stretch;
+        justify-content: center;
+    }
+    footer p {
+        display: none;
+    }
+    .legalese span {
+        display: inline-block;
+        align-self: center;
     }
 }

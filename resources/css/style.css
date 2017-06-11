@@ -7,16 +7,12 @@ html {
     box-sizing: border-box;
     /* sets the box model to include content size, padding and border, but ignores margin. */
 }
-
 *,
 *:before,
 *:after {
     box-sizing: inherit;
     /* apply a natural box layout model to all elements, but allowing components to change */
 }
-
-
-
 button {
     padding: 0;
 
@@ -27,524 +23,428 @@ button {
     /* reset for user agent's button styling */
 }
 
-/* References
-================================================================================
-  background-image link to directory: "../images/"
-  dark grey color: #4a4a4a;
-  medium grey color: #9b9b9b;
-  light grey color: #d8d8d8;
-==============================================================================*/
-
-
 /* Universal Styling
 ==============================================================================*/
-* {
-    font-family: 'Fira Sans', Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.625;
-
-    letter-spacing: .03625rem;
-    word-spacing: .0625rem;
-}
-
 body {
     display: flex;
     flex-direction: column;
 
-    color: #4a4a4a;
-    background-color: #fff;
+    min-height: 100vh;
+    margin: 0 auto;
 }
-
-body,
-p {
-    font-family: 'Fira Sans', Helvetica, sans-serif;
+body > * {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    line-height: 1.625;
+    line-height: 1.33;
 
-    letter-spacing: .03625rem;
-    word-spacing: .0625rem;
+    letter-spacing: normal;
+    word-spacing: normal;
 }
+p,
+blockquote {
+    font-family: 'Alegreya', Georgia, serif;
+}
+button {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
 
+    letter-spacing: .015rem;
+}
+footer,
+header,
+main,
+section {
+    width: 100%;
+}
+a {
+    display: inline;
+
+    text-decoration: none;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    letter-spacing: .015rem;
+
+    color: #292e40;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    letter-spacing: .015rem;
+
+    color: #292e40;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    letter-spacing: normal;
+
+    color: #292e40;
+}
+/* Section 1 - body copy */
+h4 {
+    font-family: 'Alegreya', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    letter-spacing: normal;
+}
+/* COURSES in small caps */
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-variant: small-caps;
+
+    width: 100%;
+
+    letter-spacing: .030rem;
+
+    border-bottom: 2px solid #292e40;
+}
+/* quote author in section 2 */
+h6 {
+    font-size: .75rem;
+    font-weight: 400;
+
+    letter-spacing: -.010rem;
+}
 blockquote {
     text-indent: -.5rem;
 
     hanging-punctuation: first;
 }
-
-main {
-    margin: 4rem 0 0 0;
-
-    background-color: coral;
-}
-
-a {
-    text-decoration: none;
-
-    color: #4a4a4a;
-}
-
 section {
-    top: 4rem;
-
-    max-width: 75rem;
-}
-
-aside {
-    width: 27rem;
-}
-
-h1 {
-    font-size: 2.074rem;
-    font-weight: 700;
-    line-height: 1.25;
-}
-
-h2 {
-    font-size: 1.728rem;
-    font-weight: 700;
-    line-height: 1.35;
-}
-
-h3 {
-    font-size: 1.44rem;
-    font-weight: 600;
-    line-height: 1.45;
-}
-
-h4 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-h5 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.55;
-}
-
-h6 {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-ul {
     display: flex;
+    align-items: flex-end;
+
+    padding: 2rem 0 2rem 1.5rem;
 }
-
-.sitewrap {
-    width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
-
-    background-color: purple;
-}
-
-.sectionhead {
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-    max-width: 75rem;
-    padding: 1rem 0 2rem 0;
-}
-
-/* Flex Layouts
-==============================================================================*/
-
-.flexrow {
+section:nth-child(3) {
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    padding: 2rem 1.5rem;
+}
+main {
+    position: relative;
+    top: 64px;
+
+    flex: 1;
+}
+/* section background colors */
+section:nth-child(1) {
+    background-color: #f0f0f0;
+}
+section:nth-child(3) {
+    background-color: #f4edf6;
 }
 
-.flexrowbaseline {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
+section:nth-child(4) {
+    background-color: #fffff7;
 }
 
-/* Header: Logo and Navigation
+
+/* Media Object Defined
 ==============================================================================*/
+/* information and thesis */
+.mediaobject_perp {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
 
+    height: 100%;
+    padding: 1rem 0;
+}
+.mediaobject_perp img {
+    width: 40%;
+    padding: 0 1rem;
+
+    object-fit: contain;
+}
+.mediacopy_para a {
+    text-decoration: underline;
+
+    color: #fff;
+}
+.mediacopy_para p {
+    margin: .5rem 0;
+}
+.mediacopy_para {
+    padding: 1rem 1rem 1rem 0;
+}
+.mobile {
+    display: none;
+}
+
+/* courses */
+.mediaobject_para {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column wrap;
+
+    width: 30%;
+    margin: 1rem 1rem 0 0;
+    padding: 0 0 1rem 0;
+
+    border: 3px double #edf9ff;
+    background-color: #b0a4be;
+}
+.mediaobject_para img {
+    width: 100%;
+    margin: 0 1rem 0 0;
+    padding: 0 0 1rem 0;
+}
+.mediatext_para {
+    margin: 0 1rem 0;
+}
+.mediatext_para p {
+    margin: .5rem 0;
+}
+
+/* Header and Navigation
+==============================================================================*/
 header {
     position: fixed;
     z-index: 100;
 
     display: flex;
+
+    height: 64px;
+    padding: 0 1.5rem;
+
+    background-color: #b0a4be;
+}
+nav {
+    display: flex;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: space-between;
 
     width: 100%;
-    max-width: 75rem;
-    height: 4rem;
-    padding: 0 1.5rem;
-
-    white-space: nowrap;
-
-    color: #ddb;
-    border-bottom: 1px solid #d8d8d8;
-    background-color: #635;
 }
-
-/* Logo */
-
-header span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.65;
-
-    display: inline-block;
-
-    letter-spacing: .03625rem;
+nav img {
+    height: 1.5rem;
 }
-
-.logo {
-    height: 2.5rem;
-}
-
-.boldname {
-    font-weight: 500;
-
-    margin: 0 -.3rem 0 0;
-
-    letter-spacing: .025rem;
-
-    color: #ddb;
-}
-
-.lightname {
-    font-weight: 200;
-
-    letter-spacing: .025rem;
-
-    color: #fc8;
-}
-
-/* Navigation */
-
-nav a {
-    display: inline-block;
-
-    margin: 0 0 0 .5rem;
-    padding: 0 .25rem 0 .25rem;
-
-    color: #ddb;
-}
-
-nav a:hover {
-    color: #635;
-    border-top-left-radius: .35rem;
-    border-top-right-radius: .35rem;
-    background-color: #d8d8d8; /*#fc8;*/
-    box-shadow: 0 1.15rem #d8d8d8;
-}
-
-nav a:active {
-    color: #123;
-    border-top-left-radius: .35rem;
-    border-top-right-radius: .35rem;
-    background-color: #fc8;
-    box-shadow: 0 1.15rem #d8d8d8;
-}
-
-
-/* Section 1: Banner Image and Button
-==============================================================================*/
-
-.banner {
+.logo_perp {
     display: flex;
     align-items: center;
-
-    padding: 2rem 0;
-
-    background-color: #9b9b9b;
 }
+.logotype_perp {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.25rem;
 
-/* Banner Image */
-
-.banner img {
-    width: 60%;
-    margin: 0 1.5rem 0 0;
-    padding: 0 0 0 1.5rem;
-}
-
-.banner aside {
-    width: 40%;
-}
-
-.banner article {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
-    width: 66%;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+
+    color: #292e40;
+}
+.logotype_head {
+    font-weight: 600;
+}
+.logotype_tail {
+    font-weight: 200;
+}
+.menu_perp img {
+    display: none;
+}
+.menu_perp {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.menu_perp a {
     margin: 0 0 0 1rem;
-    padding: 0 1.5rem 0;
+
+    color: #292e40;
 }
 
-.banner h1,
-h4 {
-    margin: 0 0 2rem 0;
+/* Banner - Section 1
+==============================================================================*/
+.banner_full_perp {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+}
+.banner_wide_para {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column wrap;
+
+    width: 60%;
+    padding: 0 1.5rem 0 0;
+}
+.banner_wide_para img {
+    width: 100%;
+
+    object-fit: contain;
+}
+.banner_narrow_para {
+    display: flex;
+    align-self: center;
+    flex-flow: column nowrap;
+
+    width: 40%;
+    padding: 0 0 0 1rem;
+}
+.banner_narrow_para h4 {
+    margin: 2rem 0;
+}
+.banner_narrow_para ul {
+    margin: 0 2rem 0 0;
 }
 
 /* Button */
-
-.banner button {
-    padding: 1rem 0;
+button {
+    width: 100%;
+    padding: .5rem 0;
 
     color: #fff;
-    background-color: #4a4a4a;
+    background-color: #b0a4be;
+}
+button:hover {
+    background-color: #292e40;
+}
+button:active {
+    background-color: #3e033f;
 }
 
-.banner button:hover {
-    background-color: #37b7ee;
-}
-
-.banner button:active {
-    background-color: #f50;
-}
-
-/* Section 2: Information Image and Articles
+/* Information - Section 2
 ==============================================================================*/
-
-.information {
-    display: flex;
-}
-
-.infobanner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 60%;
-    margin: 0 1.5rem 0 0;
-    padding: 2rem 0 2rem 1.5rem;
-}
-
-.infobanner img {
-    width: 100%;
-    margin: 0 0 .5rem 0;
-}
-
-.infobanner h1,
-.infobanner h6,
-.infobanner blockquote {
-    margin: 1.5rem 0 0 0;
-}
-
-.information aside {
-    display: flex;
-    flex-flow: column wrap;
-
-    width: 40%;
-    height: 100%;
-    padding: 1rem 0 0 0;
-
-    border-left: 1px solid #9b9b9b;
-}
-
-.information article {
-    display: flex;
-    align-items: flex-start;
-    flex-flow: row nowrap;
-
-    padding: 0 1.5rem 0 0;
-
-    border-bottom: 1px solid #9b9b9b;
-    background-color: #fff;
-}
-
-.information article:last-child {
-    border: none;
-}
-
-.information article:hover {
-    background-color: #d8d8d8;
-}
-
-.information article img {
-    width: 35%;
-    margin: 1rem;
-}
-
-.articlecopy {
-    display: flex;
-    flex-flow: column wrap;
-
-    height: 100%;
-    margin: 1rem 0 0 0;
-}
-
-.articlecopy h3,
-.articlecopy p {
-    margin: 0 0 .5rem 0;
-}
-
-.articlecopy a {
-    color: #37b7ee;
-}
-
-/* Section 3: Courses
-==============================================================================*/
-
-.courses {
+.info_full_perp {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-}
 
-.coursecol {
+    width: 100%;
+}
+.info_wide_para {
     display: flex;
+    align-items: stretch;
     flex-flow: column wrap;
 
-    max-width: 30%;
-    margin: 0 1rem 1rem;
-
-    color: papayawhip;
-    background-color: #123;
+    width: 60%;
+    padding: 1rem 1.5rem 0 0;
 }
-
-.coursecol h3 {
-    margin: 1rem 1rem .5rem;
-}
-
-.coursecol h6 {
-    font-variant: small-caps;
-
-    width: 90%;
-    margin: 0 1rem .5rem;
-
-    text-align: left;
-    letter-spacing: .085rem;
-
-    border-bottom: 1px solid papayawhip;
-}
-
-.coursecol p {
-    margin: 1rem 1rem 1.5rem;
-}
-
-.coursecol img {
+.info_wide_para img {
     width: 100%;
-    margin: 0;
+
+    object-fit: contain;
+}
+.info_wide_para h2 {
+    margin: 2rem 0 1.5rem 0;
+}
+.info_wide_para h6 {
+    margin: 2rem 0 0 0;
 }
 
-/* Section 4: Thesis Video and Articles
-==============================================================================*/
-
-.thesis {
-    display: flex;
-}
-
-.thesisbanner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    max-width: 60%;
-    margin: 0 1.5rem 0 0;
-    padding: 2rem 0 2rem 1.5rem;
-}
-
-.thesisbanner video {
-    width: 100%;
-}
-
-.thesisbanner h3,
-.thesisbanner blockquote {
-    margin: 1.5rem 0 0 0;
-}
-
-.thesis aside {
-    display: flex;
+.info_narrow_para {
+    align-items: stretch;
     flex-flow: column wrap;
 
     width: 40%;
-    height: 100%;
-    padding: 1rem 0 0 0;
 
-    border-left: 1px solid #9b9b9b;
+    background-color: #b0a4be;
 }
 
-.thesis article {
+/* Courses - Section 3
+==============================================================================*/
+.courses_full_para {
     display: flex;
-    align-items: flex-start;
-    flex-flow: row nowrap;
+    align-items: center;
+    flex-flow: column nowrap;
 
-    height: 10.5rem;
-    padding: 0 1.5rem 0 0;
-
-    border-bottom: 1px solid #9b9b9b;
-    background-color: #fff;
+    width: 100%;
 }
-
-.thesis article:last-child {
-    border: none;
+.courses_full_para h2 {
+    margin: 0 0 2rem 0;
 }
-
-.thesis article:hover {
-    background-color: #d8d8d8;
-}
-
-.thesis article img {
-    width: 35%;
-    height: 8.5rem;
-    margin: 1rem;
-}
-
-.articlecopy {
+.courses_perp {
     display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+    padding: 0 0 2rem 0;
+}
+
+/* Thesis - Section 4
+==============================================================================*/
+.thesis_full_para {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    width: 100%;
+}
+.thesis_full_para h2 {
+    margin: 0 0 2rem 0;
+}
+.thesis_full_perp {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 100%;
+}
+.thesis_wide_para {
+    display: flex;
+    align-items: stretch;
     flex-flow: column wrap;
 
-    height: 100%;
-    margin: 1rem 0 0 0;
+    width: 60%;
+    padding: 0 1.5rem 0 0;
 }
+.videoobject video {
+    width: 100%;
 
-.articlecopy h3,
-.articlecopy p {
-    margin: 0 0 .5rem 0;
+    object-fit: cover;
 }
-
-.articlecopy a {
-    color: #37b7ee;
+.videotext_para h3 {
+    margin: 1.5rem 0;
 }
+.thesis_narrow_para {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column wrap;
 
-/* Sticky Footer: pushes footer down to stick to bottom of viewport
-==============================================================================*/
-
-#stickyfooter {
-    top: 4rem;
-
-    flex: 1 0 calc(100vh - 6rem);
+    width: 40%;
 }
 
 /* Footer: Copyright and Terms
 ==============================================================================*/
-
 footer {
+    position: relative;
+
     display: flex;
-    align-items: flex-start;
-    flex-flow: row nowrap;
+    align-items: stretch;
     justify-content: space-between;
 
-    width: 100%;
     height: 6rem;
+    margin: 4rem 0 0 0 ;
     padding: 1rem 1.5rem 0;
 
-    white-space: nowrap;
-
-    color: #ddb;
-    border-top: 1px solid #d8d8d8;
-    background-color: #635;
+    color: #e8f4fa;
+    border-top: 1px solid #9a9a9a;
+    background-color: #292e40;
 }
-
-footer a {
+footer p {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+}
+.legalese a {
     margin: 0 0 0 1rem;
 
-    color: #ddb;
+    color: #e8f4fa;
+}
+.legalese span {
+    display: none;
 }
