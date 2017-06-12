@@ -13,15 +13,6 @@ html {
     box-sizing: inherit;
     /* apply a natural box layout model to all elements, but allowing components to change */
 }
-button {
-    padding: 0;
-
-    text-decoration: none;
-
-    border: 0;
-    outline: none;
-    /* reset for user agent's button styling */
-}
 
 /* Universal Styling
 ==============================================================================*/
@@ -45,13 +36,7 @@ p,
 blockquote {
     font-family: 'Alegreya', Georgia, serif;
 }
-button {
-    font-family: 'Alegreya Sans', Helvetica, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 500;
 
-    letter-spacing: .015rem;
-}
 footer,
 header,
 main,
@@ -59,17 +44,23 @@ section {
     width: 100%;
 }
 a {
-    display: inline;
+    margin: 0;
+    padding: 0;
 
     text-decoration: none;
 }
+a:hover {
+    transition: all 1s ease;
+
+    color: #f2bb13;
+}
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 800;
 
     letter-spacing: .015rem;
 
-    color: #292e40;
+    color: #323a45;
 }
 h2 {
     font-size: 1.5rem;
@@ -77,7 +68,7 @@ h2 {
 
     letter-spacing: .015rem;
 
-    color: #292e40;
+    color: #323a45;
 }
 h3 {
     font-size: 1.05rem;
@@ -85,7 +76,7 @@ h3 {
 
     letter-spacing: normal;
 
-    color: #292e40;
+    color: #323a45;
 }
 /* Section 1 - body copy */
 h4 {
@@ -98,14 +89,14 @@ h4 {
 /* COURSES in small caps */
 h5 {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     font-variant: small-caps;
 
     width: 100%;
 
-    letter-spacing: .030rem;
+    letter-spacing: .05rem;
 
-    border-bottom: 2px solid #292e40;
+    border-bottom: 2px solid #323a45;
 }
 /* quote author in section 2 */
 h6 {
@@ -139,16 +130,14 @@ main {
 }
 /* section background colors */
 section:nth-child(1) {
-    background-color: #f0f0f0;
-}
-section:nth-child(3) {
+    border-bottom: 1px solid #aa99ba;
     background-color: #f4edf6;
 }
-
-section:nth-child(4) {
-    background-color: #fffff7;
+section:nth-child(3) {
+    border-top: 1px solid #aa99ba;
+    border-bottom: 1px solid #aa99ba;
+    background-color: #f4edf6;
 }
-
 
 /* Media Object Defined
 ==============================================================================*/
@@ -161,6 +150,11 @@ section:nth-child(4) {
     height: 100%;
     padding: 1rem 0;
 }
+.mediaobject_perp:hover {
+    transition: all 750ms ease-out 100ms;
+
+    background-color: #aa99ba;
+}
 .mediaobject_perp img {
     width: 40%;
     padding: 0 1rem;
@@ -170,7 +164,7 @@ section:nth-child(4) {
 .mediacopy_para a {
     text-decoration: underline;
 
-    color: #fff;
+    color: #f4edf6;
 }
 .mediacopy_para p {
     margin: .5rem 0;
@@ -192,13 +186,20 @@ section:nth-child(4) {
     margin: 1rem 1rem 0 0;
     padding: 0 0 1rem 0;
 
-    border: 3px double #edf9ff;
-    background-color: #b0a4be;
+    background-color: #aa99ba;
 }
 .mediaobject_para img {
     width: 100%;
     margin: 0 1rem 0 0;
     padding: 0 0 1rem 0;
+}
+.mediaobject_para a {
+    text-decoration: none;
+
+    color: #323a45;
+}
+.mediatext_para h5 {
+    margin: 1rem 0 0 0;
 }
 .mediatext_para {
     margin: 0 1rem 0;
@@ -216,9 +217,44 @@ header {
     display: flex;
 
     height: 64px;
-    padding: 0 1.5rem;
 
-    background-color: #b0a4be;
+    background-color: #aa99ba;
+}
+.activitybar {
+    position: absolute;
+    z-index: 200;
+    top: 64px;
+
+    display: block;
+
+    width: 100%;
+    margin: 0 1.5rem 0 -1.5rem;
+
+    border-bottom: 1px solid #3e033f;
+}
+.desktop_nav a:hover .logotype_tail {
+    transition: all 1s ease;
+
+    color: #f2bb13;
+}
+
+.mobile_nav a:hover {
+    margin-bottom: -.75rem;
+
+    transition: all 1s ease;
+
+    border-bottom: .75rem solid #f2bb13;
+}
+.menu_perp a:hover {
+    margin-bottom: -.70rem;
+
+    transition: all 1s ease;
+
+    border-bottom: .70rem solid #f2bb13;
+}
+
+.mobile_nav {
+    display: none;
 }
 nav {
     display: flex;
@@ -227,6 +263,7 @@ nav {
     justify-content: space-between;
 
     width: 100%;
+    padding: 0 1.5rem;
 }
 nav img {
     height: 1.5rem;
@@ -244,10 +281,12 @@ nav img {
     letter-spacing: .05rem;
     text-transform: uppercase;
 
-    color: #292e40;
+    color: #323a45;
 }
 .logotype_head {
     font-weight: 600;
+
+    color: #3e033f;
 }
 .logotype_tail {
     font-weight: 200;
@@ -262,7 +301,7 @@ nav img {
 .menu_perp a {
     margin: 0 0 0 1rem;
 
-    color: #292e40;
+    color: #323a45;
 }
 
 /* Banner - Section 1
@@ -302,20 +341,31 @@ nav img {
 .banner_narrow_para ul {
     margin: 0 2rem 0 0;
 }
-
+.banner_narrow_para aside {
+    margin: 0 1.5rem 0 0;
+}
 /* Button */
-button {
+.start {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    display: block;
+
     width: 100%;
     padding: .5rem 0;
 
-    color: #fff;
-    background-color: #b0a4be;
+    text-align: center;
+    letter-spacing: .015rem;
+
+    color: #f4edf6;
+    background-color: #aa99ba;
 }
-button:hover {
-    background-color: #292e40;
-}
-button:active {
-    background-color: #3e033f;
+.start:hover {
+    transition: all 1s ease;
+
+    color: #3e003f;
+    background-color: #f2bb13;
 }
 
 /* Information - Section 2
@@ -345,18 +395,41 @@ button:active {
 .info_wide_para h6 {
     margin: 2rem 0 0 0;
 }
-
 .info_narrow_para {
     align-items: stretch;
     flex-flow: column wrap;
 
     width: 40%;
 
-    background-color: #b0a4be;
+    border-left: 1px solid #3e033f;
+}
+.info_narrow_para a {
+    font-size: .9rem;
+    font-weight: 500;
+
+    color: #3e033f;
+}
+.info_narrow_para a:hover {
+    transition: all 1s ease;
+
+    color: #f2bb13;
 }
 
 /* Courses - Section 3
 ==============================================================================*/
+.fa {
+    padding: 0 .35rem 0 0;
+}
+.mediaobject_para a:hover i {
+    transition: all 1s ease;
+
+    color: #f2bb13;
+}
+.mediaobject_para a:hover h5 {
+    transition: all 1s ease;
+
+    border-bottom: 2px solid #f2bb13;
+}
 .courses_full_para {
     display: flex;
     align-items: center;
@@ -418,6 +491,9 @@ button:active {
     flex-flow: column wrap;
 
     width: 40%;
+    height: 50%;
+
+    border-left: 1px solid #3e003f;
 }
 
 /* Footer: Copyright and Terms
@@ -433,17 +509,26 @@ footer {
     margin: 4rem 0 0 0 ;
     padding: 1rem 1.5rem 0;
 
-    color: #e8f4fa;
-    border-top: 1px solid #9a9a9a;
-    background-color: #292e40;
+    color: #f4edf6;
+    border-top: 1px solid #3e033f;
+    background-color: #323a45;
 }
 footer p {
     font-family: 'Alegreya Sans', Helvetica, sans-serif;
 }
+footer a {
+    color: #f4edf6;
+}
+
+footer a:hover {
+    transition: all 1s ease;
+
+    color: #f2bb13;
+}
 .legalese a {
     margin: 0 0 0 1rem;
 
-    color: #e8f4fa;
+    color: #f4edf6;
 }
 .legalese span {
     display: none;

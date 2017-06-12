@@ -61,23 +61,29 @@
 
         padding: 1rem;
     }
-    nav {
-        justify-content: center;
+    .logo_perp {
+        display: none;
     }
-    nav a {
+
+    .mobile_nav img {
+        display: block;
+    }
+    header {
+        display: flex;
         justify-content: space-between;
+    }
+    nav {
+        width: 100%;
     }
     nav img {
         height: 2.5rem;
     }
-    .menu_perp span {
+    .desktop_nav {
         display: none;
     }
-    .menu_perp img {
+    .mobile_nav {
         display: flex;
-    }
-    .menu_perp a:nth-child(3) {
-        display: none;
+        justify-content: space-between;
     }
     .banner_full_perp {
         align-items: center;
@@ -94,13 +100,25 @@
         width: 100%;
         padding: 1rem;
     }
-    .banner_narrow_para ul {
+    .banner_narrow_para aside {
         margin: 0;
 
         text-align: center;
     }
+    h2 {
+        font-size: 2rem;
+        font-weight: 800;
+
+        padding: .25rem 0;
+
+        border-top: 1px dashed #3e033f;
+        border-bottom: 1px dashed #3e033f;
+    }
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+    p {
+        font-size: 1.25rem;
     }
     .info_full_perp {
         align-items: flex-start;
@@ -122,8 +140,8 @@
         align-items: stretch;
         flex-flow: column wrap;
     }
-    .mediaobject_perp ul {
-        padding: 0 0 0 2rem;
+    .mediaobject_perp .mediacopy_para {
+        padding: 1rem 2rem;
     }
     .mediaobject_perp img {
         width: 100%;
@@ -132,8 +150,11 @@
         object-fit: cover;
         object-position: center;
     }
-    .mediacopy_para li:nth-child(3) {
+    .mediacopy_para {
         padding: 0 0 1rem 0;
+    }
+    .info_narrow_para {
+        border-left: 0 solid #3e033f;
     }
     .desktop {
         display: none;
@@ -143,32 +164,31 @@
 
         width: 100%;
 
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
-
     .courses_perp {
         align-items: stretch;
         flex-flow: column wrap;
     }
     .courses_perp .mediaobject_para img,
-    .courses_perp .mediatext_para li:nth-child(2n+0),
-    .courses_perp .mediatext_para li:nth-child(3n+0) {
+    .courses_perp .mediatext_para h5,
+    .courses_perp .mediatext_para p {
         display: none;
     }
     .courses_perp .mediaobject_para {
         width: 100%;
-        margin: 0;
+        margin: .5rem 0;
         padding: 1rem 0;
     }
-    .courses_perp .mediatext_para li {
+    .mediatext_para {
         display: flex;
         align-items: baseline;
-
-        padding: 0;
     }
     .thesis_full_para {
         flex-flow: column wrap;
+
+        padding: 1rem 0 2rem 0;
     }
     .thesis_wide_para {
         width: 100%;
@@ -186,7 +206,10 @@
     footer p {
         display: none;
     }
-    .legalese span {
+    .legalese span,
+    a {
+        font-size: 1.5rem;
+
         display: inline-block;
         align-self: center;
     }
