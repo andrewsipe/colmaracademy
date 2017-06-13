@@ -256,18 +256,6 @@ header {
 
     background-color: #aa99ba;
 }
-.activitybar {
-    position: absolute;
-    z-index: 200;
-    top: 64px;
-
-    display: block;
-
-    width: 100%;
-    margin: 0 1.5rem 0 -1.5rem;
-
-    border-bottom: 1px solid #3e033f;
-}
 .desktop_nav a:hover .logotype_tail {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
