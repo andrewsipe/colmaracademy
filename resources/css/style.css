@@ -1,6 +1,7 @@
 /* Root, Rem and Resets
 ==============================================================================*/
 html {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
     font-size: 16px;
     /* sets the rem basis */
 
@@ -51,16 +52,19 @@ section {
     width: 100%;
 }
 a {
+    font-weight: 500;
+
     margin: 0;
     padding: 0;
 
     text-decoration: none;
+    letter-spacing: .08rem;
 }
 a:hover {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    color: #f2bb13;
+    color: #f5d76e;
 }
 h1 {
     font-size: 2.5rem;
@@ -68,7 +72,7 @@ h1 {
 
     letter-spacing: .015rem;
 
-    color: #323a45;
+    color: #22313f;
 }
 h2 {
     font-size: 1.5rem;
@@ -76,7 +80,7 @@ h2 {
 
     letter-spacing: .015rem;
 
-    color: #323a45;
+    color: #22313f;
 }
 h3 {
     font-size: 1.05rem;
@@ -84,7 +88,7 @@ h3 {
 
     letter-spacing: normal;
 
-    color: #323a45;
+    color: #22313f;
 }
 /* Section 1 - body copy */
 h4 {
@@ -104,7 +108,7 @@ h5 {
 
     letter-spacing: .05rem;
 
-    border-bottom: 2px solid #323a45;
+    border-bottom: 2px solid #22313f;
 }
 /* quote author in section 2 */
 h6 {
@@ -149,12 +153,12 @@ main {
 /* section background colors */
 section:nth-child(1) {
     border-bottom: 1px solid #aa99ba;
-    background-color: #f4edf6;
+    background-color: #f4edf6; /*#f4edf6;*/
 }
 section:nth-child(3) {
     border-top: 1px solid #aa99ba;
     border-bottom: 1px solid #aa99ba;
-    background-color: #f4edf6;
+    background-color: #f2f1ef;
 }
 
 /* Media Object Defined
@@ -230,16 +234,23 @@ section:nth-child(3) {
 .mediaobject_para a {
     text-decoration: none;
 
-    color: #323a45;
+    color: #22313f;
 }
 .mediatext_para h5 {
     margin: 1rem 0 0 0;
+
+    color: #f2f1ef;
+}
+.mediatext_para h3 {
+    color: #22313f;
 }
 .mediatext_para {
     margin: 0 1rem 0;
 }
 .mediatext_para p {
     margin: .5rem 0;
+
+    color: #f2f1ef;
 }
 
 /* Header and Navigation
@@ -260,7 +271,7 @@ header {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    color: #f2bb13;
+    color: #f5d76e;
 }
 
 .mobile_nav a:hover {
@@ -269,7 +280,7 @@ header {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    border-bottom: .75rem solid #f2bb13;
+    border-bottom: .75rem solid #f5d76e;
 }
 .menu_perp a:hover {
     margin-bottom: -.70rem;
@@ -277,7 +288,7 @@ header {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    border-bottom: .70rem solid #f2bb13;
+    border-bottom: .70rem solid #f5d76e;
 }
 
 .mobile_nav {
@@ -323,15 +334,17 @@ nav img {
     letter-spacing: .05rem;
     text-transform: uppercase;
 
-    color: #323a45;
+    color: #22313f;
 }
 .logotype_head {
     font-weight: 600;
 
-    color: #3e033f;
+    color: #2c3e50;
 }
 .logotype_tail {
     font-weight: 200;
+
+    color: #2c3e50;
 }
 .menu_perp img {
     display: none;
@@ -348,7 +361,7 @@ nav img {
 .menu_perp a {
     margin: 0 0 0 1rem;
 
-    color: #323a45;
+    color: #22313f;
 }
 
 /* Banner - Section 1
@@ -428,7 +441,7 @@ nav img {
     text-align: center;
     letter-spacing: .015rem;
 
-    color: #f4edf6;
+    color: #f2f1ef;
     background-color: #aa99ba;
 }
 .start:hover {
@@ -436,7 +449,7 @@ nav img {
             transition: all 1s ease;
 
     color: #3e003f;
-    background-color: #f2bb13;
+    background-color: #f5d76e;
 }
 
 /* Information - Section 2
@@ -502,7 +515,7 @@ nav img {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    color: #f2bb13;
+    color: #f5d76e;
 }
 
 /* Courses - Section 3
@@ -514,13 +527,13 @@ nav img {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    color: #f2bb13;
+    color: #f5d76e;
 }
 .mediaobject_para a:hover h5 {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    border-bottom: 2px solid #f2bb13;
+    border-bottom: 2px solid #f5d76e;
 }
 .courses_full_para {
     display: -webkit-box;
@@ -657,7 +670,7 @@ footer {
 
     color: #f4edf6;
     border-top: 1px solid #3e033f;
-    background-color: #323a45;
+    background-color: #22313f;
 }
 footer p {
     font-family: 'Alegreya Sans', Helvetica, sans-serif;
@@ -672,7 +685,7 @@ footer a:hover {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
 
-    color: #f2bb13;
+    color: #f5d76e;
 }
 .legalese a {
     margin: 0 0 0 1rem;
