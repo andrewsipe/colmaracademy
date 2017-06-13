@@ -606,6 +606,9 @@ nav img {
     width: 60%;
     padding: 0 1.5rem 0 0;
 }
+.thesis_wide_para h6 {
+    margin: 2rem 0 0 0;
+}
 .videoobject video {
     width: 100%;
 
@@ -658,6 +661,8 @@ footer {
 }
 footer p {
     font-family: 'Alegreya Sans', Helvetica, sans-serif;
+
+    word-spacing: .15rem;
 }
 footer a {
     color: #f4edf6;
