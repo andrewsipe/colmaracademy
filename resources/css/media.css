@@ -38,7 +38,7 @@
 /* portrait mobile */
 @media only screen and (max-width: 750px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
 
         transition: all 1s ease ;
     }
@@ -52,7 +52,7 @@
 /* small screens */
 @media only screen and (max-width: 600px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
 
         transition: all 1s ease 1s;
     }
@@ -170,6 +170,8 @@
     .courses_perp {
         align-items: stretch;
         flex-flow: column wrap;
+
+        margin: 1rem 0;
     }
     .courses_perp .mediaobject_para img,
     .courses_perp .mediatext_para h5,
